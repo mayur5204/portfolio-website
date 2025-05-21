@@ -9,14 +9,14 @@ const ContactSection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       ref={sectionRef}
       className="py-24 relative"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#030014] to-[#05051A] z-[-1]"></div>
-      
+
       <div className="container mx-auto px-6">
         {/* Section heading */}
         <motion.div
@@ -45,14 +45,14 @@ const ContactSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">Email</h3>
             <p className="text-neutral-400 mb-4">Drop me a message anytime</p>
-            <a 
-              href="mailto:mayurpatil5204@outlook.com" 
+            <a
+              href="mailto:mayurpatil5204@outlook.com"
               className="text-[#00FFFF] hover:underline transition-all font-medium"
             >
               mayurpatil5204@outlook.com
             </a>
           </motion.div>
-          
+
           {/* GitHub Contact Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -65,16 +65,16 @@ const ContactSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">GitHub</h3>
             <p className="text-neutral-400 mb-4">Check out my code and projects</p>
-            <a 
-              href="https://github.com/mayur5204" 
-              target="_blank" 
+            <a
+              href="https://github.com/mayur5204"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-[#00FFFF] hover:underline transition-all font-medium"
             >
               github.com/mayur5204
             </a>
           </motion.div>
-          
+
           {/* LinkedIn Contact Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -87,9 +87,9 @@ const ContactSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">LinkedIn</h3>
             <p className="text-neutral-400 mb-4">Connect professionally</p>
-            <a 
-              href="https://www.linkedin.com/in/mayur5204" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/mayur5204"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-[#00FFFF] hover:underline transition-all font-medium"
             >
@@ -97,7 +97,7 @@ const ContactSection = () => {
             </a>
           </motion.div>
         </div>
-        
+
         {/* Additional contact message */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -106,7 +106,7 @@ const ContactSection = () => {
           className="mt-12 text-center"
         >
           <p className="text-neutral-300 max-w-2xl mx-auto">
-            I&apos;m always interested in new opportunities, collaborations, and conversations about AI, machine learning, and technology. 
+            I&apos;m always interested in new opportunities, collaborations, and conversations about AI, machine learning, and technology.
             Feel free to reach out through any of the channels above!
           </p>
         </motion.div>

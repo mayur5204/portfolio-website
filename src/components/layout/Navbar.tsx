@@ -26,7 +26,7 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -64,17 +64,17 @@ const Navbar = () => {
 
   // Animation variants for mobile menu
   const mobileMenuVariants = {
-    closed: { 
+    closed: {
       opacity: 0,
       scale: 0.95,
-      transition: { 
+      transition: {
         duration: 0.2,
       },
     },
-    open: { 
+    open: {
       opacity: 1,
       scale: 1,
-      transition: { 
+      transition: {
         duration: 0.2,
       },
     },
@@ -85,11 +85,10 @@ const Navbar = () => {
       variants={navbarVariants}
       initial="hidden"
       animate="visible"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
           ? 'bg-[#030014]/80 backdrop-blur-md py-3 shadow-lg'
           : 'bg-transparent py-5'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
@@ -102,14 +101,14 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8">
           {navItems.map((item, i) => (
-            <motion.li 
-              key={item.name} 
+            <motion.li
+              key={item.name}
               custom={i}
               variants={navItemVariants}
               initial="hidden"
               animate="visible"
             >
-              <Link 
+              <Link
                 href={item.href}
                 className="text-white hover:text-[#00FFFF] transition-colors duration-300 font-medium"
               >
@@ -137,9 +136,8 @@ const Navbar = () => {
         variants={mobileMenuVariants}
         initial="closed"
         animate={isMobileMenuOpen ? "open" : "closed"}
-        className={`md:hidden bg-[#030014]/95 backdrop-blur-lg absolute w-full ${
-          isMobileMenuOpen ? 'block' : 'hidden'
-        }`}
+        className={`md:hidden bg-[#030014]/95 backdrop-blur-lg absolute w-full ${isMobileMenuOpen ? 'block' : 'hidden'
+          }`}
       >
         <div className="container mx-auto px-6 py-4">
           <ul className="flex flex-col space-y-4">

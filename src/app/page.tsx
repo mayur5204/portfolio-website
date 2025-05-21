@@ -6,7 +6,7 @@ import HeroBrain from "@/components/3d/HeroBrain";
 import AboutSection from "@/components/sections/AboutSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import AISection from "@/components/sections/AISection";
-import ContactSection from "@/components/sections/ContactSection"; 
+import ContactSection from "@/components/sections/ContactSection";
 import LoadingWrapper from "@/components/layout/LoadingWrapper";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
