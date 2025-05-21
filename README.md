@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mayur Patil - AI & ML Engineer Portfolio
+
+This is a 3D AI-powered portfolio website for Mayur Machhindra Patil, showcasing his skills as an AI & ML Engineering student. The website features impressive 3D visualizations, animations, and a futuristic UI using Three.js, GSAP, and React Three Fiber.
+
+## Features
+
+- Interactive 3D brain visualization using Three.js and React Three Fiber
+- Modern, AI-themed design with gradients and animations
+- Fully responsive layout for all device sizes
+- Performance optimizations for different devices
+- Sections for showcasing projects, skills, and experiences
+- Contact form for potential collaboration
+- Animated transitions and effects using GSAP and Framer Motion
+
+## Technologies Used
+
+- **Next.js**: React framework with App Router
+- **TypeScript**: For type safety
+- **Three.js**: For 3D visualizations
+- **React Three Fiber**: React renderer for Three.js
+- **GSAP**: For advanced animations
+- **Framer Motion**: For component animations
+- **Tailwind CSS**: For styling
+- **React Icons**: For icons
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mayur5204/portfolio-website.git
+   cd portfolio-website
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+src/
+  ├── animations/      # Animation utilities
+  ├── app/             # Next.js app router pages
+  ├── assets/          # Static assets (images, models, fonts)
+  ├── components/      
+  │   ├── 3d/          # 3D components (Three.js)
+  │   ├── layout/      # Layout components (Navbar, Footer)
+  │   ├── sections/    # Page sections (Hero, Projects, About, etc.)
+  │   └── ui/          # UI components
+  ├── hooks/           # Custom React hooks
+  ├── styles/          # Global styles
+  ├── types/           # TypeScript type definitions
+  └── utils/           # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This site can be easily deployed on Vercel:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push your code to a GitHub repository
+2. Import the project into Vercel
+3. Configure any environment variables if needed
+4. Deploy!
 
-## Learn More
+## Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+To build the application for production:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To preview the production build:
 
-## Deploy on Vercel
+```bash
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Credits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Designed and developed by Mayur Patil
+- 3D animations and visualizations created using Three.js
+- Built with assistance from VS Code AI Agent
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
