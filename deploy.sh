@@ -127,18 +127,24 @@ deploy_to_vercel() {
 echo "========================================="
 echo "      Portfolio Website Deployment       "
 echo "========================================="
-echo "1. Deploy to GitHub Pages"
-echo "2. Deploy to Vercel"
+echo "1. Deploy to Vercel (recommended)"
+echo "2. Deploy to GitHub Pages (legacy)"
 echo "3. Exit"
 echo "========================================="
 read -p "Choose an option (1-3): " choice
 
 case $choice in
     1)
-        deploy_to_github_pages
+        deploy_to_vercel
         ;;
     2)
-        deploy_to_vercel
+        print_warning "Note: The site is configured for Vercel deployment."
+        read -p "Are you sure you want to deploy to GitHub Pages? (y/n): " confirm
+        if [[ $confirm == [Yy]* ]]; then
+            deploy_to_github_pages
+        else
+            print_warning "Deployment canceled."
+        fi
         ;;
     3)
         print_warning "Exiting deployment script."

@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Vercel
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main  # Set this to your default branch
 
 jobs:
-  build-and-deploy:
+  deploy-to-vercel:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -20,12 +20,11 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to Vercel 🚀
+        uses: amondnet/vercel-action@v25
         with:
-          folder: out
-          branch: gh-pages
-          clean: true
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}  # You'll need to add this secret in your repo
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # You'll need to add this secret in your repo
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # You'll need to add this secret in your repo
+          working-directory: ./
+          vercel-args: '--prod'  # Deploy to production

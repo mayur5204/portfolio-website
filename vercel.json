@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "public": true,
+  "github": {
+    "enabled": true,
+    "silent": false
+  }
+}
