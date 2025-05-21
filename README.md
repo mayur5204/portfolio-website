@@ -1,16 +1,21 @@
 # Mayur Patil - AI & ML Engineer Portfolio
 
-This is a 3D AI-powered portfolio website for Mayur Machhindra Patil, showcasing his skills as an AI & ML Engineering student. The website features impressive 3D visualizations, animations, and a futuristic UI using Three.js, GSAP, and React Three Fiber.
+A cutting-edge 3D AI-powered portfolio website for Mayur Machhindra Patil, a 3rd-year AI & ML Engineering student based in Pune, Maharashtra. This interactive portfolio showcases technical expertise through immersive 3D visualizations, neural network animations, and a futuristic UI built with modern web technologies including Three.js, GSAP, and React Three Fiber.
 
 ## Features
 
-- Interactive 3D brain visualization using Three.js and React Three Fiber
-- Modern, AI-themed design with gradients and animations
-- Fully responsive layout for all device sizes
-- Performance optimizations for different devices
-- Sections for showcasing projects, skills, and experiences
-- Contact form for potential collaboration
-- Animated transitions and effects using GSAP and Framer Motion
+- **Interactive 3D Neural Network**: Stunning brain visualization with particle systems and dynamic animations
+- **AI-Themed Dark Mode UI**: Modern design with purple/cyan gradients and futuristic aesthetics
+- **Adaptive Performance**: Automatic optimization based on device capabilities
+- **Responsive Design**: Seamlessly adapts to mobile, tablet, and desktop devices
+- **Dynamic Content Sections**:
+  - Hero section with 3D background visualization
+  - About section with interactive timeline and skill ratings
+  - Projects portfolio with filterable categories
+  - AI + You section demonstrating AI collaboration potential
+  - Contact section with form and social links
+- **Smooth Animations**: Scroll-triggered effects and transitions using GSAP and Framer Motion
+- **Optimized Build & Deploy**: Configured for Vercel's continuous deployment
 
 ## Technologies Used
 
@@ -63,32 +68,54 @@ src/
 
 ## Deployment
 
-This site can be easily deployed on Vercel:
+This site is configured for automatic deployment with Vercel's GitHub integration:
 
-1. Push your code to a GitHub repository
-2. Import the project into Vercel
-3. Configure any environment variables if needed
-4. Deploy!
+1. **Automatic Deployment** (Recommended):
+   - Push your code to the GitHub repository
+   - Vercel automatically detects changes and deploys the site
+   - Visit the deployed site at your Vercel URL or custom domain
 
-## Building for Production
+2. **Manual Deployment** (If needed):
+   ```bash
+   # Use the provided script for manual deployment
+   ./deploy.sh
+   ```
 
-To build the application for production:
+## Development Workflow
 
-```bash
-npm run build
-```
+1. **Pull latest changes** (when working across devices):
+   ```bash
+   ./update.sh
+   ```
 
-To preview the production build:
+2. **Make your changes locally**
 
-```bash
-npm run start
-```
+3. **Test in development mode**:
+   ```bash
+   npm run dev
+   # Visit http://localhost:3000 to preview
+   ```
+
+4. **Push changes to deploy**:
+   ```bash
+   git add .
+   git commit -m "Your update message"
+   git push origin main
+   ```
+
+## Contact Information
+
+- **GitHub**: [github.com/mayur5204](https://github.com/mayur5204)
+- **LinkedIn**: [linkedin.com/in/mayur5204](https://www.linkedin.com/in/mayur5204)
+- **Email**: [mayurpatil5204@outlook.com](mailto:mayurpatil5204@outlook.com)
+- **Location**: Pune, Maharashtra, India
 
 ## Credits
 
-- Designed and developed by Mayur Patil
-- 3D animations and visualizations created using Three.js
-- Built with assistance from VS Code AI Agent
+- Designed and developed by Mayur Machhindra Patil
+- 3D animations and visualizations created using Three.js and React Three Fiber
+- Performance optimizations implemented for various device capabilities
+- Built with assistance from GitHub Copilot and VS Code AI Agents (May 2025)
 
 ## License
 
