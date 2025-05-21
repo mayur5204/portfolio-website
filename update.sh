@@ -81,7 +81,7 @@ update_from_github() {
   
   print_success "Update completed successfully!"
   print_warning "You can now run the development server with 'npm run dev' to test the changes."
-  print_warning "When ready to deploy, run './deploy.sh'"
+  print_warning "When you push your changes to GitHub, Vercel will automatically deploy them."
 }
 
 # Execute the update function

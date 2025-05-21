@@ -1,11 +1,8 @@
 #!/bin/bash
-# Deployment script for the portfolio website
-
-# Set variables
-PROJECT_NAME="portfolio-website"
-BUILD_DIR="out"
-GITHUB_USERNAME="mayur5204"
-REPO_NAME="portfolio-website"
+# Manual deployment script for the portfolio website to Vercel
+# Note: This script is only needed if you want to manually deploy
+# without pushing to GitHub. Normally, Vercel will automatically 
+# deploy when you push changes to your GitHub repository.
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -26,11 +23,10 @@ print_error() {
     echo -e "${RED}$1${NC}"
 }
 
-# Check if Git is installed
-if ! [ -x "$(command -v git)" ]; then
-  print_error "Error: git is not installed."
-  exit 1
-fi
+print_warning "Starting manual deployment to Vercel..."
+print_warning "Note: This is only needed if you don't want to push to GitHub."
+print_warning "Normally, pushing to GitHub will trigger automatic deployment."
+echo ""
 
 # Check if npm is installed
 if ! [ -x "$(command -v npm)" ]; then
@@ -38,18 +34,41 @@ if ! [ -x "$(command -v npm)" ]; then
   exit 1
 fi
 
-# Function to deploy to GitHub Pages
-deploy_to_github_pages() {
-    print_warning "Starting deployment to GitHub Pages..."
-    
-    # Build project
-    print_warning "Building project..."
-    npm run build
+# Install Vercel CLI locally if not in node_modules
+if [ ! -d "node_modules/vercel" ]; then
+    print_warning "Vercel CLI not found in local dependencies. Installing locally..."
+    npm install --save-dev vercel
     
     if [ $? -ne 0 ]; then
-        print_error "Build failed. Please fix the errors and try again."
+        print_error "Failed to install Vercel CLI. Please check npm permissions and try again."
         exit 1
     fi
+fi
+
+# Check if user is logged in to Vercel, if not prompt to login
+print_warning "Checking Vercel authentication..."
+npx vercel whoami &>/dev/null
+
+if [ $? -ne 0 ]; then
+    print_warning "You are not logged in to Vercel. Please log in now:"
+    npx vercel login
+    
+    if [ $? -ne 0 ]; then
+        print_error "Failed to log in to Vercel. Please try again."
+        exit 1
+    fi
+fi
+
+# Deploy to Vercel (production) using local installation
+print_warning "Deploying to Vercel..."
+npx vercel --prod
+
+if [ $? -eq 0 ]; then
+    print_success "Deployed successfully to Vercel!"
+else
+    print_error "Deployment to Vercel failed. Please check the error messages above."
+    exit 1
+fi
     
     # Navigate to build directory
     cd $BUILD_DIR || {
