@@ -54,15 +54,12 @@ A cutting-edge 3D AI-powered portfolio website for Mayur Machhindra Patil, a 3rd
 src/
   ├── animations/      # Animation utilities
   ├── app/             # Next.js app router pages
-  ├── assets/          # Static assets (images, models, fonts)
   ├── components/      
   │   ├── 3d/          # 3D components (Three.js)
   │   ├── layout/      # Layout components (Navbar, Footer)
   │   ├── sections/    # Page sections (Hero, Projects, About, etc.)
   │   └── ui/          # UI components
   ├── hooks/           # Custom React hooks
-  ├── styles/          # Global styles
-  ├── types/           # TypeScript type definitions
   └── utils/           # Utility functions
 ```
 
