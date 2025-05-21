@@ -11,7 +11,6 @@ const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
   { name: 'AI + You', href: '#ai-you' },
-  { name: 'Contact', href: '#contact' },
 ];
 
 const Navbar = () => {

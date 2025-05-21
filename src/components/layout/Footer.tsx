@@ -77,14 +77,6 @@ const Footer = () => {
                   AI + You
                 </Link>
               </li>
-              <li>
-                <Link 
-                  href="#contact" 
-                  className="text-neutral-400 hover:text-[#00FFFF] transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
           
